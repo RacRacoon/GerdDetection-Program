@@ -7,7 +7,8 @@ Fitur:
 - Tekan Enter = langsung diagnosa
 - Rekomendasi obat awal
 
-*Apa yang dipakai?*
+
+Apa yang dipakai?
 - HTML + CSS + JavaScript
 - Naive Bayes Classifier
 - FontAwesome + Google Fonts
