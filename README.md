@@ -5,15 +5,14 @@ Website cerdas untuk mendeteksi apakah gejala kamu lebih condong ke **Maag** ata
 Fitur:
 - Animasi halus & desain modern
 - Tekan Enter = langsung diagnosa
-- Rekomendasi obat awal (Promag, Mylanta, Omeprazole, dll)
-- 100% jalan offline di HP/laptop
+- Rekomendasi obat awal
 
-Teknologi:
+*Apa yang dipakai?*
 - HTML + CSS + JavaScript
 - Naive Bayes Classifier
 - FontAwesome + Google Fonts
 
-Coba sekarang:  
-https://username-kamu.github.io/diagnosa-maag-gerd
+Coba sekarang:
+https://racracoon.github.io/GerdDetection-Program/
 
-*Catatan: Hanya untuk skrining awal. Tetap konsultasi dokter ya!*
+*Catatan: Hanya untuk penanganan pertama, jika sakit berlanjut hubungi dokter!*
