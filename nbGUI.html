@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sistem Diagnosa Maag vs GERD</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="nbGUI.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+<div class="container">
+<header class="header">
+<h1><i class="fas fa-heartbeat"></i> Self Diagnosis : Gastritis vs Gerd</h1>
+<p class="description">
+                Maag atau Gerd? Yuk cek diagnosis awal untuk memilih obat penanganan pertama buat kamu!
+</p>
+</header>
+<section class="input-section">
+<label for="keluhanInput">Apa Keluhanmu???</label>
+<textarea id="keluhanInput" rows="6" placeholder="Contoh: Dada terasa panas seperti terbakar..."></textarea>
+<button id="analisisButton">
+<i class="fas fa-stethoscope"></i> Diagnosa Sekarang
+</button>
+</section>
+<section class="output-section">
+<h2>Hasil Perkiraan Diagnosis</h2>
+<div id="resultBox" class="result-box">
+<p id="resultText">Tekan tombol “Diagnosa Sekarang” untuk memulai.</p>
+</div>
+<p class="disclaimer">
+<i class="fas fa-exclamation-triangle"></i>
+<strong>Catatan penting:</strong> Diagnosis ini hanya perkiraan awal berbasis gejala umum dan <strong>bukan pengganti konsultasi dokter profesional</strong>.
+</p>
+</section>
+</div>
+
+<script src="bayes.js"></script>
+
+<!-- FUNGSI INI WAJIB ADA (hanya 15 baris) -->
+<script>
+function tampilkanHasil(teks, tipe = "") {
+    const box  = document.getElementById('resultBox');
+    const text = document.getElementById('resultText');
+    text.innerHTML = teks;
+
+    // Reset kelas warna
+    box.classList.remove('maag', 'gerd', 'keduanya');
+
+    // Tambah kelas warna baru
+    if (tipe) box.classList.add(tipe);
+
+    // Trigger animasi halus
+    box.classList.remove('show');
+    void box.offsetWidth;   // magic reflow
+    box.classList.add('show');
+}
+</script>
+</body>
+</html>
